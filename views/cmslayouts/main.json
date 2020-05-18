@@ -1,0 +1,11 @@
+{
+    "rows" : [
+        [
+            {"cols": 8, "var": "content", "label": "Main content"},
+            {"cols": 4, "var": "right", "label": "Sidebar"}
+        ],
+        [
+            {"cols": 12, "var": "footer", "label": "Footer"}
+        ]
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "name": "antikon/conference-kickstarter",
+    "description": "The kickstarter project for a new Conference.",
+    "type": "kickstarter",
+    "license":"MIT",
+    "require": {
+        "luyadev/luya-module-cms" : "^3.0.0",
+        "luyadev/luya-module-crawler": "^1.0.0",
+        "antikon/luya-module-conference": "dev-master",
+        "luyadev/luya-module-gallery":"^1.0",
+        "bizley/migration": "^3.0.0"
+    },
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:antikon/luya-module-conference.git"
+        }
+    ],
+
+    "require-dev": {
+        "yiisoft/yii2-gii" : "~2.0.0",
+        "yiisoft/yii2-debug" : "~2.0.0",
+        "luyadev/luya-testsuite": "@dev"
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "public_html/assets": "0777",
+                    "public_html/storage": "0777",
+                    "runtime" : "0777"
+                }
+            ]
+		},
+        "asset-installer-paths": {
+            "bower-asset-library": "vendor/bower",
+            "npm-asset-library": "vendor/npm"
+        },
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        
+        "fxp-asset" : {
+            "pattern-skip-version": "(-build|-patch)",
+             "installer-paths": {
+                "bower-asset-library": "vendor/bower",
+                "npm-asset-library": "vendor/npm"
+            }
+        },
+        "github-oauth": {
+             "github.com": "a0fe6dfe237f456f8b0ae2c4a5721374d595eeb9"
+        }
+    }
+    
+}
