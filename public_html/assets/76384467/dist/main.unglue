@@ -1,9 +1,0 @@
-{
-    "js" : [
-        "../js/cmsadmin.js",
-        "../js/services.js"
-    ],
-    "css": [
-        "../scss/cmsadmin.scss"
-    ]
-}
