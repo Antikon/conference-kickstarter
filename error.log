@@ -1,0 +1,1 @@
+[Tue May 19 18:35:04.091900 2020] [core:error] [pid 2300:tid 796] (20024)The given path is misformatted or contained invalid characters: [client 127.0.0.1:57677] AH00127: Cannot map GET /%22alias[@web]/image.jpg/%22 HTTP/1.1 to file, referer: http://conference/admin

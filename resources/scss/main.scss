@@ -1,0 +1,31 @@
+// ==================================================
+// VARIABLES
+// Overwrites the default bootstrap variables
+// and adds new ones
+
+@import "base/variables";
+
+// ==================================================
+// BOOTSTRAP
+
+// Import whole bootstrap project
+@import "../../vendor/npm-asset/bootstrap/scss/bootstrap";
+
+// Import bootstrap grid
+//@import "../../vendor/twbs/bootstrap/scss/bootstrap-grid";
+
+// Import bootstrap reboot
+//@import "../../vendor/twbs/bootstrap/scss/bootstrap-reboot";
+
+
+// ==================================================
+// PROJECT
+// Components
+
+@import "components/mixins";
+@import "components/base";
+//@import "components/blog";
+//@import "components/about";
+//@import "components/responsive";
+
+

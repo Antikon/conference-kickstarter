@@ -4,7 +4,13 @@
     "type": "kickstarter",
     "license":"MIT",
     "require": {
+	    "yiisoft/yii2-bootstrap4": "~2.0.8",
+        "luyadev/luya-core" : "^1.0",
+        "luyadev/luya-module-admin" : "^3.0",
         "luyadev/luya-module-cms" : "^3.0.0",
+        "luyadev/luya-generic" : "^1.0",
+		"luyadev/luya-bootstrap3": "^1.0",
+        "luyadev/luya-bootstrap4": "^1.0",
         "luyadev/luya-module-crawler": "^1.0.0",
         "antikon/luya-module-conference": "dev-master",
         "luyadev/luya-module-gallery":"^1.0",
@@ -15,7 +21,12 @@
         {
             "type": "vcs",
             "url":  "git@github.com:antikon/luya-module-conference.git"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
+
     ],
 
     "require-dev": {
@@ -48,13 +59,8 @@
     },
     "config": {
         "preferred-install": "dist",
-        
-        "fxp-asset" : {
-            "pattern-skip-version": "(-build|-patch)",
-             "installer-paths": {
-                "bower-asset-library": "vendor/bower",
-                "npm-asset-library": "vendor/npm"
-            }
+        "fxp-asset": {
+            "enabled": false
         },
         "github-oauth": {
              "github.com": "a0fe6dfe237f456f8b0ae2c4a5721374d595eeb9"

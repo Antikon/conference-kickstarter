@@ -1,0 +1,28 @@
+.zaa-datetime {
+    .input-group {
+        float: left;
+    }
+
+    .input-group-append .material-icons {
+        font-size: 1.3em;
+    }
+
+    .hour-selection {
+        margin-left: 25px;
+
+        .input-group:first-of-type {
+            margin-right: -1px;
+        }
+    }
+}
+
+.zaa-datetime-time-colon {
+    z-index: z-index(above-content);
+}
+
+.zaa-datetime-hour-input,
+.zaa-datetime-minute-input {
+    max-width: 45px;
+    text-align: center;
+    width: 100%;
+}

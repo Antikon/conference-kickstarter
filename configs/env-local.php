@@ -13,6 +13,11 @@ defined('YII_ENV') or define('YII_ENV', 'local');
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 
 $config = [
+	'aliases' => [
+    	'@bower' => '@vendor/bower-asset',
+	    '@npm' => '@vendor/npm-asset',
+	],
+
 
      'bootstrap' => ['log'],
     /*
@@ -53,7 +58,7 @@ $config = [
             'class' => 'luya\admin\Module',
             'secureLogin' => false, // when enabling secure login, the mail component must be proper configured otherwise the auth token mail will not send.
             'strongPasswordPolicy' => false, // If enabled, the admin user passwords require strength input with special chars, lower, upper, digits and numbers
-            'interfaceLanguage' => 'ru', // Admin interface default language. Currently supported: en, de, ru, es, fr, ua, it, el, vi, pt, fa
+            'interfaceLanguage' => 'en', // Admin interface default language. Currently supported: en, de, ru, es, fr, ua, it, el, vi, pt, fa
 
         ],
         /*
@@ -95,6 +100,10 @@ $config = [
 
             'isAdditionalSectionEnabled' => true,
 
+            'abstractSubmissionType' => 'typing', // "upload" or "typing" (default)
+            
+            'isAbstractsAndProceedingsAreTheSame' => true,
+
             'fees' => [
             
                 'local' => [
@@ -122,9 +131,9 @@ $config = [
             'moduleHomeUrl'=> 'my-office',
             'conferenceName' => [
                 'en' => [
-                    'nominative'    => '{XXIV [Symposium]} «Nanophysics & Nanoelectronics»'
+                    'nominative'    => '{VII [Conference]} on Physics of Liquids'
                 ],
-                'ru' => [
+/*                'ru' => [
                     'nominative'    => '{XXIV [Cимпозиум]} «Нанофизика и наноэлектроника»',
                     'genitive'      => '{XXIV [Cимпозиума]} «Нанофизика и наноэлектроника»',
                     'dative'        => '{XXIV [Cимпозиуму]} «Нанофизика и наноэлектроника»',
@@ -132,6 +141,7 @@ $config = [
                     'instrumental'  => '{XXIV [Cимпозиумом]} «Нанофизика и наноэлектроника»',
                     'prepositional' => '{XXIV [Cимпозиуме]} «Нанофизика и наноэлектроника»'
                 ],
+                */
             ],
 
 
@@ -176,8 +186,52 @@ $config = [
 
     ],
     'components' => [
-        
-        
+
+	    'assetManager' => [
+            'converter' => [
+                'class' => 'yii\web\AssetConverter',
+                'commands' => [
+	                'scss' => ['css', 'sass {from} {to} --source-map'],
+                ],
+            ],
+
+            // override bundles to use local project files :
+            
+            'bundles' => [
+                'yii\bootstrap4\BootstrapAsset' => [
+                    'sourcePath' => '@app/resources',
+                    'css' => [
+                        'css/main.css'
+                    ],
+                ],
+                /*	
+                'yii\bootstrap\BootstrapPluginAsset' => [
+                    'sourcePath' => '@app/resources',
+                    'css' => [
+                        'css/main.css'
+                    ],
+                    'js' => [
+                        'js/bootstrap.min.js'
+                    ],
+
+                ],
+                
+                'yii\bootstrap\BootstrapThemeAsset' => [
+                    'sourcePath' => '@app/resources',
+                    'css' => [
+                        'css/main.css'
+                    ],
+                    'js' => [
+                        'js/bootstrap.min.js'
+                    ],
+                ],
+                */
+            ],
+            
+
+        ],
+
+    
         'log' => [
             'targets' => [
                 [
@@ -225,7 +279,7 @@ $config = [
          */
         'composition' => [
             'hidden' => false, // no languages in your url (most case for pages which are not multi lingual)
-            'default' => ['langShortCode' => 'ru'], // the default language for the composition should match your default language shortCode in the language table.
+            'default' => ['langShortCode' => 'en'], // the default language for the composition should match your default language shortCode in the language table.
         ],
         /*
          * If cache is enabled LUYA will cache cms blocks and speed up the system in different ways. In the prep config

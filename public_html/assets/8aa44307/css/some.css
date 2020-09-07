@@ -1,0 +1,77 @@
+.table thead th div.table-sorter-wrapper {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+
+.table thead th div.table-sorter-wrapper .table-sorter .material-icons {
+    writing-mode: lr;
+    transform: rotate(180deg);
+}
+
+
+input[type="checkbox"] + label {
+    width: auto;
+    height: 24px;
+}
+
+
+input[type="checkbox"]:disabled + label {
+    opacity: .25;
+    cursor: default;
+}
+
+/*
+.conf-room-div .zaaselect {
+    background-color: yellow;
+}
+*/
+
+.conf-entity-div-saved .zaaselect-selected {
+    border-color: #28a745;
+    border-width: 2px;
+}
+
+.conf-entity-div-error .zaaselect-selected {
+    border-color: #dc3545;
+    border-width: 2px;
+}
+
+
+.conf-entity-div-duplicate .zaaselect-selected {
+    background-color: #ffc107;
+}
+
+
+select.activeFilter {
+    background-color: rgba(151, 230, 11, .25);
+}
+
+select.activeFilter:focus {
+    -webkit-box-shadow: 0 0 0 .2rem rgba(103, 153, 15, .25);
+    box-shadow: 0 0 0 .2rem rgba(103, 153, 15, .25);
+}
+
+.collapsablePanel.faded {
+    opacity: .5;
+
+}
+
+.collapsablePanel.broadcasting .panelHeader {
+    font-weight: 400;
+}
+
+.collapsablePanel .panelHeader::before {
+    content: ' \25B8';
+}
+
+.collapsablePanel.expanded .panelHeader::before {
+    content: ' \25BE';
+}
+
+.yellowLetter {
+    background-color: lightyellow;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid lightgray;
+}

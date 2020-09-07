@@ -2,22 +2,21 @@
 
 namespace app\assets;
 
+use luya\bootstrap4\Bootstrap4Asset;
+
 class ResourcesAsset extends \luya\web\Asset
 {
-    public $sourcePath = '@app/resources';
+    public $sourcePath = "@app/resources";
     
     public $css = [
-        //'//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
-        YII_ENV . '/css/Common.css',
-        YII_ENV . '/css/Markup.css',
-        YII_ENV . '/css/Text.css'
+        /*'//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',*/
+        /*'scss/main.scss',*/
+        'css/main.css'
     ];
 
     public $js = [
-        YII_ENV . '/js/browser.min.js',
-        YII_ENV . '/js/breakpoints.min.js',
-        YII_ENV . '/js/utils.js',
-        YII_ENV . '/js/main.js'
+        'js/bootstrap.min.js',
+        'js/main.js'
     ];
 
 /*

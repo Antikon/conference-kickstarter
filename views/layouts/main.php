@@ -1,11 +1,8 @@
 <?php
-
-use antikon\conference\frontend\Module;
 use app\assets\ResourcesAsset;
-use luya\helpers\Url;
 use luya\cms\widgets\LangSwitcher;
 use yii\helpers\Html;
-use yii\widgets\LinkPager;
+
 
 
 /* @var $language string */
@@ -13,7 +10,6 @@ use yii\widgets\LinkPager;
 /* @var $provider \yii\data\ActiveDataProvider */
 
 
-\yii\bootstrap\BootstrapAsset::register($this);
 ResourcesAsset::register($this);
 
 /* @var $this luya\web\View */
@@ -27,26 +23,6 @@ $headerData = \Yii::$app->getModule('conference')->getConferenceHeader();
 
 $isHome = (Yii::$app->menu->current == '/'.Yii::$app->composition->language.'/index');
 
-$this->beginBlock('contacts'); ?>
-    <h2><?=\Yii::t('app/template', 'Contacts');?></h2>
-    <!--                <p><b>+7 986 7661599</b> — телефон для связи с оргкомитетом во время симпозиума.</p>-->
-    <p><i><?=\Yii::t('app/template', 'Vladimir Vladimirovich Rumyantsev');?></i> — <?=\Yii::t('app/template', 'scientific secretary of the Symposium');?>, <br>
-        <b><?=\Yii::t('app/template', 'Ph.');?>: (831) 417−94−82 +262</b></p>
-    <p><i><?=\Yii::t('app/template', 'Maria Vladimirovna Zorina');?></i><br>
-        <b><?=\Yii::t('app/template', 'Ph.');?>: (831) 417-94-76 +520</b></p>
-
-    <!--                <p><i>Валентина Григорьевна Беллюстина</i> (по вопросам оплаты), <br>
-                    <b>+7 910 3810391</b></p>
-                    <p><i>Роман Станиславович Малофеев</i> (по вопросам трансфера), <br>
-                    <b>+7 904 9009555</b></p>
-    -->
-
-    <p><?=\Yii::t('app/template', 'Fax');?>: (831) 417–94–64</p>
-    <p>E-mail: <a href="mailto:symp@nanosymp.ru">symp@nanosymp.ru</a></p>
-    <p><a href="https://vk.com/nanosymp"><img src="/images/vk_icon.png"> Nanosymp</a></p>
-<?php $this->endBlock();
-
-
 $this->beginPage();
 ?>
 <!DOCTYPE html>
@@ -59,241 +35,193 @@ $this->beginPage();
     <?php $this->head() ?>
 
 
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-468412-4']);
-        _gaq.push(['_trackPageview']);
 
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
+
 </head>
-<body class="is-preload">
+<body>
 <?php $this->beginBody() ?>
-<div id="center-global-wrapper">
-    <div id="x4-global-wrapper">
-        <div id="pre-global-wrapper">
 
 
-            <div id="global-wrapper">
-
-                <div class="page">
-                    <div class="top">
-                        <div id="langs"><?=LangSwitcher::widget(
-                                [
-                                    'elementActiveClass' => 'active',
-
-
-                                    /*
-'listElementOptions' => ['class' => 'langnav__list'],
-                                    'elementOptions' => ['class' => 'langnav__item'],
-                                    'linkOptions' => ['class' => 'langnav__link'],*/
-                                ]
-                            );?></div>
-                        <div id="name">
-
-                            <header class="conf-name"><?php if (!$isHome): ?><a href="<?=Yii::$app->getHomeUrl()?>"><?php endif;?><span class="dropcap"><?=$headerData['number'];?></span><?=$headerData['first'];?><br>
-                                <span class="shift"><?=$headerData['second'];?></span><?php if (!$isHome): ?></a><?php endif;?>
-                            </header>
-                        </div>
-
-                        <div id="period">
-                            <h2 class="conf-period"><nobr><?=\Yii::t('app/template', 'Nizhny Novgorod');?></nobr>
-                                <span><nobr><?=\Yii::t('app/template', 'March, 10-13, 2020');?></nobr></span></h2>
-                        </div>
-                    </div>
+<div class="container-fluid p-0 pr-lg-5 pl-lg-5 main-wrapper">
+    <div class="row no-gutters">
+        <div class="col-md-3 navbg"></div>
+        <div class="languages theme-bg-light col-xs-12 col-md-9 px-5 py-2 shadow">
+            <div class="row">
+                <div class="col-sm">
+                    <a href="mailto:#">organizers@liquidconference.org</a>
                 </div>
+                <div class="col-sm text-sm-center">
+                    <ul class="social-list list-inline mx-auto">
+                        <li class="list-inline-item"><a href="#"><img src="/images/instagram.svg"</img></a></li>
+                        <li class="list-inline-item"><a href="#"><img src="/images/facebook.svg"</img></a></li>
+                        <li class="list-inline-item"><a href="#"><img src="/images/vk.svg"</img></a></li>
+                    </ul>
 
-                <div class="page">
-                    <div class="left-column">
-
-                        <nav class="menu">
-                            <ul>
-                                <?php foreach (Yii::$app->menu->findAll(['depth' => 1, 'container' => 'main']) as $item): /* @var $item \luya\cms\menu\Item */ ?>
-                                    <li class="nav-item<?= $item->isActive ? ' active' : '' ?>">
-                                        <a class="nav-link" href="<?= $item->link; ?>"><?= $item->title; ?></a>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </nav>
-
-
-                        <div class="kabinet-button">
-                            <div class="button-shadow">
-                                <?= Html::a(\Yii::t('app/template', 'My office'),
-                                    ['/'.\Yii::$app->getModule('conference')->moduleHomeUrl],
-                                    ['class' => 'button']
-                                ) ?>
-                            </div>
-                            <div class="kabinet-button-shadow"></div>
-                        </div>
-
-                        <!--
-                                <div class="left-col-block">
-
-                                    <h2><?=\Yii::t('app/template', 'Sponsors');?></h2>
-
-                                </div>
-                        -->
-
-                        <?php if (!$isHome): ?>
-
-                            <div class="left-col-block">
-                                <?php if (isset($this->blocks['contacts'])): ?>
-                                    <?= $this->blocks['contacts'] ?>
-                                <?php endif ?>
-                            </div>
-
-                        <?else:?>
-
-
-                            <div class="left-col-block">
-                                <h2><?=\Yii::t('app/template', 'Important dates');?></h2>
-                                <ul>
-                                    <?php // TODO: Make block ?>
-
-                                    <?php if (Yii::$app->composition->language == 'ru'): ?>
-
-
-                                    <li><b>06.11.2019 — Регистрация, представление тезисов докладов;</b> </li>
-                                    <li>26.11.2019 — Рассылка информации о принятии докладов и второго извещения;</li>
-                                    <li>23.01.2020 — Крайний срок оплаты оргвзноса за участие в Симпозиуме; </li>
-                                    <li>23.01.2020 — Крайний срок представления расширенных тезисов для публикации в трудах Cимпозиума; </li>
-                                    <li>05.03.2020 — Крайний срок представления статей для публикаций в журналах; </li>
-                                    <li>10.03.2020 — Начало работы Симпозиума. </li>
-
-                                    <?php else: ?>
-
-                                    <li><b>Nov 06, 2019 — Registration, theses submission;</b></li>
-                                    <li>Nov 26, 2019 — Second announcement;</li>
-                                    <li>Jan 23, 2020 — Last day of payment;</li>
-                                    <li>Jan 23, 2020 — Papers submission; </li>
-                                    <li>Mar 03, 2020 — Journals papers submission; </li>
-                                    <li>Mar 10, 2020 — Symposium start. </li>
-
-                                    <?php endif;?>
-
-                                </ul>
-                            </div>
-
-
-                        <?endif;?>
-
-
-
-                    </div>
-
-                    <div class="right-column">
-
-                        <div class="unclearer">
-                            <div class="bnrs-row">
-                                <table><tr>
-
-                                        <!--
-                                                         <td class="one-half">
-                                                            <div class="row-bnr">
-                                                                <div class="bnr" id="registr"></div>
-                                                                <h2>Регистрация</h2>
-                                                                <a class="bnr-link" href="my_office?operate=register"><span class="hidden">Регистрация</span></a>
-                                                            </div>
-                                                        </td>
-
-
-
-                                                        <td class="one-half">
-                                                            <div class="row-bnr">
-                                                                <div class="bnr" id="bablo"></div>
-                                                                <h2>Порядок оплаты</h2>
-                                                                <a class="bnr-link" href="payment"><span class="hidden">Порядок оплаты</span></a>
-                                                            </div>
-                                                        </td>
-                                        -->
-                                        <td class="one-first">
-                                            <div class="row-bnr">
-                                                <div class="bnr" id="sana"></div>
-                                                <h2><?=\Yii::t('app/template', 'Venue');?></h2>
-                                                <a class="bnr-link" href="location"><span class="hidden"><?=\Yii::t('app/template', 'Venue');?></span></a>
-                                            </div>
-                                        </td>
-                                    </tr></table>
-                            </div>
-
-                            <?php if ($isHome): ?>
-
-
-                                <div class="inner-left-column">
-                                    <div id="maintext">
-                                        <!-- main text -->
-                                        <h1><?= $this->title; ?></h1>
-                                        <?= $content; ?>
-                                        <!-- end of main text -->
-                                    </div>
-
-                                    <div class="maintext-shadow"></div>
-                                </div>
-
-                                <div class="inner-right-column">
-
-                                    <?php /*
-                                    <div class="news right-col">
-                                        <block name="News">
-                                    </div>
-                                    <hr>
-                                    */?>
-                                    <div class="contacts right-col">
-                                        <?php if (isset($this->blocks['contacts'])): ?>
-                                            <?= $this->blocks['contacts'] ?>
-                                        <?php endif ?>
-                                    </div>
-                                </div>
-
-                            <?else:?>
-                                <div class="inner-page">
-                                    <div id="maintext">
-                                        <!-- main text -->
-                                        <h1><?= $this->title; ?></h1>
-                                        <?= $content; ?>
-                                            <!-- end of main text -->
-                                    </div>
-                                </div>
-                            <?endif;?>
-                        </div>
-
-                    </div>
                 </div>
-
-                <div class="clear"></div>
-
-                <div id="footer">
-                    <div class="page">
-                        <div class="left-column">
-                            <div class="copyright">
-                                <p>© 2010&mdash;<?=date('Y');?>, <?=\Yii::t('app/template', 'IPM RAS');?>.<br>
-                                        E-mail: <a href="mailto:symp@nanosymp.ru">symp@nanosymp.ru</a></p>
-                            </div>
-                        </div>
-
-                        <div class="right-column">
-                            <div class="address2">
-                                <p><?=\Yii::t('app/template', 'Phone');?>: (831) 417−94−82 +262<br>
-                                   <?=\Yii::t('app/template', 'Fax');?>:    (831) 417–94–74</p>
-                            </div>
-                            <div class="address1">
-                                <p><?=\Yii::t('app/template', 'Address');?>: <?=\Yii::t('app/template', 'GSP-105, Nizhny Novgorod, 603950, Russia');?></p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
+                <div class="col-sm text-sm-right">
+                    <?=LangSwitcher::widget(
+                        [
+                            'elementActiveClass' => 'active',
+                        ]
+                    );?>
                 </div>
-
             </div>
         </div>
     </div>
+
+    <div class="row no-gutters">
+        <div class="col-md-1 navbg"></div>
+        <header class="header col-md-11 shadow p-5">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                    <p class="display-3 name">
+                    <?php if (!$isHome): ?><a href="<?=Yii::$app->getHomeUrl()?>"><?php endif;?>
+                            <?=$headerData['number'];?> <?=$headerData['first'];?><br>
+                            <?=$headerData['second'];?>
+                    <?php if (!$isHome): ?></a><?php endif;?>
+                    </p>
+                </div>
+                <div class="col-xl-2  my-auto">
+                    <p class="h2"><?=\Yii::t('app/template', 'Grenoble');?><br>
+                        <?=\Yii::t('app/template', 'June, 10-13, 2022');?>
+                    </p>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="d-block d-md-grid grid">
+
+        <div class="a px-5 py-4  navbg left-column">
+            <div class="row no-gutters mb-4 mt-4 mt-md-0">
+                <div class="col-3 col-md-12 navbar-dark d-md-none">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-9 col-md-12">
+                    <hr class="d-none d-md-block pb-2">
+                    <div class="my-0 mt-md-4 mb-md-4 text-center">
+                        <?= Html::a(\Yii::t('app/template', 'My office'),
+                            ['/'.\Yii::$app->getModule('conference')->moduleHomeUrl],
+                            ['class' => 'btn btn-warning shadow-sm btn-block font-weight-bold']
+                        ) ?>
+                    </div>
+                </div>
+            </div>
+            <h6 class="d-none d-md-block left-column-header"><?=\Yii::t('app/template', 'Menu');?></h6>
+            <nav class="navbar navbar-expand-md navbar-dark  p-0">
+                <div id="navigation" class="collapse navbar-collapse flex-column" >
+                    <ul class="navbar-nav flex-column text-left w-100 h5">
+                        <?php foreach (Yii::$app->menu->findAll(['depth' =>1, 'container' => 'default']) as $item): /* @var $item \luya\cms\menu\Item */ ?>
+                            <li class="nav-item<?=($item->isActive ? ' active' : '') ?>">
+                                <a class="nav-link" href="<?= $item->link; ?>"><?= $item->title; ?></a>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+
+
+        <div class="b theme-bg-light shadow">
+            <section class="cta-section p-5">
+                    <h1  class="heading"><?= $this->title; ?></h1>
+                    <?= $content; ?>
+            </section>
+        </div>
+
+
+        <div class="c navbg left-column px-5 py-4 pt-md-0">
+            <section class="important-dates">
+                <h6 class="left-column-header"><?=\Yii::t('app/template', 'Important dates');?></h6>
+                <ul>
+                    <li class="highlight"><b>06.11.2019</b> — Регистрация, представление тезисов докладов;</li>
+                    <li>26.11.2019 — Рассылка информации о принятии докладов и второго извещения;</li>
+                    <li>23.01.2020 — Крайний срок оплаты оргвзноса за участие в Симпозиуме; </li>
+                    <li>23.01.2020 — Крайний срок представления расширенных тезисов для публикации в трудах Cимпозиума; </li>
+                    <li>05.03.2020 — Крайний срок представления статей для публикаций в журналах; </li>
+
+                </ul>
+            </section>
+            <section class="sponsors">
+                <h6 class="left-column-header"><?=\Yii::t('app/template', 'Sponsors');?></h6>
+                <div class="row align-items-center justify-content-center text-center ">
+                    <figure class="col-4 col-sm-3 col-md-12 col-lg-12 col-xl-6 col-xxl-3">
+                        <a href="#" class="stretched-link">
+                            <img src="/images/Wikipedia-logo-v2.svg" class="img-fluid" style="width: 60%">
+                        </a>
+                    </figure>
+                    <figure class="col-4 col-sm-3 col-md-12 col-lg-12 col-xl-6 col-xxl-3">
+                        <a href="#" class="stretched-link">
+                            <img src="/images/php-logo.svg" class="img-fluid  w-75">
+                        </a>
+                    </figure>
+                    <figure class="col-4 col-sm-3 col-md-12 col-lg-12 col-xl-6 col-xxl-3">
+                        <a href="#" class="stretched-link">
+                            <img src="/images/luyalogo.png" class="img-fluid w-50">
+                        </a>
+                    </figure>
+                    <figure class="col-4 col-sm-3 col-md-12 col-lg-12 col-xl-6 col-xxl-3">
+                        <a href="#" class="stretched-link">
+                            <img src="/images/php-logo.svg" class="img-fluid w-75">
+                        </a>
+                    </figure>
+                    <figure class="col-4 col-sm-3 col-md-12 col-lg-12 col-xl-6 col-xxl-3">
+                        <a href="#" class="stretched-link">
+                            <img src="/images/Wikipedia-logo-v2.svg" class="img-fluid" style="width: 60%">
+                        </a>
+                    </figure>
+                </div>
+            </section>
+            <section class="contacts">
+                <h6 class="left-column-header"><?=\Yii::t('app/template', 'Contacts');?></h6>
+
+                <!--                <p><b>+7 986 7661599</b> — телефон для связи с оргкомитетом во время симпозиума.</p>-->
+                <p><i><?=\Yii::t('app/template', 'Vladimir Vladimirovich Rumyantsev');?></i> — <?=\Yii::t('app/template', 'scientific secretary of the Symposium');?>, <br>
+                    <b><?=\Yii::t('app/template', 'Ph.');?>: (831) 417−94−82 +262</b></p>
+                <p><i><?=\Yii::t('app/template', 'Maria Vladimirovna Zorina');?></i><br>
+                    <b><?=\Yii::t('app/template', 'Ph.');?>: (831) 417-94-76 +520</b></p>
+
+                <!--                <p><i>Валентина Григорьевна Беллюстина</i> (по вопросам оплаты), <br>
+                                <b>+7 910 3810391</b></p>
+                                <p><i>Роман Станиславович Малофеев</i> (по вопросам трансфера), <br>
+                                <b>+7 904 9009555</b></p>
+                -->
+
+                <p><?=\Yii::t('app/template', 'Fax');?>: (831) 417–94–64</p>
+                <p>E-mail: <a href="mailto:symp@nanosymp.ru">symp@nanosymp.ru</a></p>
+
+            </section>
+
+        </div>
+
+
+    </div>
+    <footer class="footer theme-bg-dark shadow">
+        <div class="row no-gutters text-center text-lg-left py-3 pt-4">
+        <div class="col-lg col-xl-3 px-md-5">
+            <section>
+                <p>© 2010&mdash;<?=date('Y');?>, <?=\Yii::t('app/template', 'IPM RAS');?>.<br>
+                    E-mail: <a href="mailto:symp@nanosymp.ru">symp@nanosymp.ru</a></p>
+            </section>
+        </div>
+        <div class="col-lg px-xl-5">
+            <section>
+                <p><?=\Yii::t('app/template', 'Phone');?>: (831) 417−94−82 +262<br>
+                    <?=\Yii::t('app/template', 'Fax');?>:    (831) 417–94–74</p>
+            </section>
+        </div>
+        <div class="col-lg px-md-5">
+            <section>
+                <p><?=\Yii::t('app/template', 'Address');?>: <?=\Yii::t('app/template', 'GSP-105, Nizhny Novgorod, 603950, Russia');?></p>
+            </section>
+        </div>
+        </div>
+    </footer>
 </div>
+
 <?php $this->endBody() ?>
 </body>
 </html>
