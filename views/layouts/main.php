@@ -21,12 +21,12 @@ ResourcesAsset::register($this);
 
 $headerData = \Yii::$app->getModule('conference')->getConferenceHeader();
 
-$isHome = (Yii::$app->menu->current == '/'.Yii::$app->composition->language.'/index');
+$isHome = (Yii::$app->menu->current == '/'.Yii::$app->composition->langShortCode.'/index');
 
 $this->beginPage();
 ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->composition->language; ?>">
+<html lang="<?= Yii::$app->composition->langShortCode; ?>">
 <head>
 
     <title><?= $this->title; ?></title>
@@ -52,8 +52,7 @@ $this->beginPage();
                 </div>
                 <div class="col-sm text-sm-center">
                     <ul class="social-list list-inline mx-auto">
-                        <li class="list-inline-item"><a href="#"><img src="/images/instagram.svg"</img></a></li>
-                        <li class="list-inline-item"><a href="#"><img src="/images/facebook.svg"</img></a></li>
+                        <li class="list-inline-item"><a href="#"><img src="/images/telegram.svg"</img></a></li>
                         <li class="list-inline-item"><a href="#"><img src="/images/vk.svg"</img></a></li>
                     </ul>
 
