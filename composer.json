@@ -4,17 +4,17 @@
     "type": "kickstarter",
     "license":"MIT",
     "require": {
-	    "yiisoft/yii2-bootstrap4": "~2.0.8",
-        "luyadev/luya-core" : "^1.0",
-        "luyadev/luya-module-admin" : "^3.0",
-        "luyadev/luya-module-cms" : "^3.0.0",
+        "luyadev/luya-core" : "^2.0",
+        "luyadev/luya-module-admin" : "^5.0",
+        "luyadev/luya-module-cms" : "^5.0",
         "luyadev/luya-generic" : "^1.0",
 		"luyadev/luya-bootstrap3": "^1.0",
         "luyadev/luya-bootstrap4": "^1.0",
         "luyadev/luya-module-crawler": "^1.0.0",
         "antikon/luya-module-conference": "dev-master",
-        "luyadev/luya-module-gallery":"^1.0",
-        "bizley/migration": "^3.0.0"
+        "cebe/luya-module-sitemap": "^1.4",
+        "luyadev/luya-module-gallery" : "^1.0"
+
     },
 
     "repositories": [
@@ -32,7 +32,9 @@
     "require-dev": {
         "yiisoft/yii2-gii" : "~2.0.0",
         "yiisoft/yii2-debug" : "~2.0.0",
-        "luyadev/luya-testsuite": "@dev"
+	"bizley/migration": "^4.0",
+        "luyadev/luya-testsuite": "^3.1"
+
     },
     "scripts": {
         "post-create-project-cmd": [
@@ -58,13 +60,16 @@
         }
     },
     "config": {
-        "preferred-install": "dist",
-        "fxp-asset": {
-            "enabled": false
+        "preferred-install": {
+            "antikon/luya-module-conference": "source",
+            "*": "dist"
         },
-        "github-oauth": {
-             "github.com": "a0fe6dfe237f456f8b0ae2c4a5721374d595eeb9"
+
+       "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "luyadev/luya-composer": true
         }
+
     }
     
 }
