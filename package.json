@@ -1,0 +1,7 @@
+{
+  "name": "confetti-kickstarter",
+  "version": "0.0.1",
+  "repository": "git@github.com:antikon/conference-kickstarter.git",
+  "author": "Anton Ikonnikov <antikon2@yandex.ru>",
+  "license": "MIT",
+}
