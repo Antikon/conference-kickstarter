@@ -1,2 +1,2 @@
 # conference-kickstarter
-This is a good start for your conference
+This is a kickstarter for confetti conference system.
