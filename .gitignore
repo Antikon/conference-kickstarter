@@ -9,6 +9,8 @@ composer.phar
 /docker/.env
 /.env
 
+error.log
+
 /public_html/assets
 /public_html/storage
 
