@@ -1,4 +1,6 @@
 <?php
+
+use antikon\conference\frontend\widgets\SponsorsWidget;
 use app\assets\ResourcesAsset;
 use luya\cms\widgets\LangSwitcher;
 use yii\helpers\Html;
@@ -32,6 +34,9 @@ $this->beginPage();
     <title><?= $this->title; ?></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <?php $this->head() ?>
 
 
@@ -48,12 +53,12 @@ $this->beginPage();
         <div class="languages theme-bg-light col-xs-12 col-md-9 px-5 py-2 shadow">
             <div class="row">
                 <div class="col-sm">
-                    <a href="mailto:#">organizers@liquidconference.org</a>
+                    <a href="mailto:<?php echo (\Yii::$app->getModule('conference')->mainEmail);?>"><?php echo (\Yii::$app->getModule('conference')->mainEmail);?></a>
                 </div>
                 <div class="col-sm text-sm-center">
-                    <ul class="social-list list-inline mx-auto">
-                        <li class="list-inline-item"><a href="#"><img src="/images/telegram.svg"</img></a></li>
-                        <li class="list-inline-item"><a href="#"><img src="/images/vk.svg"</img></a></li>
+                    <ul class="scl-list list-inline mx-auto">
+                        <li class="list-inline-item"><a href="#"><img src="/images/telegram.svg" class="w-100"></a></li>
+                        <li class="list-inline-item"><a href="#"><img src="/images/vk.svg"  class="w-100"></a></li>
                     </ul>
 
                 </div>
@@ -81,8 +86,8 @@ $this->beginPage();
                     </p>
                 </div>
                 <div class="col-xl-2  my-auto">
-                    <p class="h2"><?=\Yii::t('app/template', 'Grenoble');?><br>
-                        <?=\Yii::t('app/template', 'June, 10-13, 2022');?>
+                    <p class="h2"><?=\Yii::t('app/template', 'Moscow');?><br>
+                        <?=\Yii::t('app/template', 'June, 10–13, 2028');?>
                     </p>
                 </div>
             </div>
@@ -108,7 +113,7 @@ $this->beginPage();
                     </div>
                 </div>
             </div>
-            <h6 class="d-none d-md-block left-column-header"><?=\Yii::t('app/template', 'Menu');?></h6>
+            <h5 class="d-none d-md-block left-column-header"><?=\Yii::t('app/template', 'Menu');?></h5>
             <nav class="navbar navbar-expand-md navbar-dark  p-0">
                 <div id="navigation" class="collapse navbar-collapse flex-column" >
                     <ul class="navbar-nav flex-column text-left w-100 h5">
@@ -133,8 +138,18 @@ $this->beginPage();
 
 
         <div class="c navbg left-column px-5 py-4 pt-md-0">
+            <section class="contacts">
+                <h5 class="left-column-header"><?=\Yii::t('app/template', 'Contacts');?></h5>
+
+                <!--                <p><b>+7 986 7661599</b> — телефон для связи с оргкомитетом во время симпозиума.</p>-->
+                <p><i><?=\Yii::t('app/template', 'Ivan Fedorovich Krusenstern');?></i> — <?=\Yii::t('app/template', 'scientific secretary of the Conference');?> <br>
+                    <b><?=\Yii::t('app/template', 'Ph.');?>: +7 (999) 999−99−99</b></p>
+                <p><?=\Yii::t('app/template', 'Fax');?>: +7 (999) 999−99−98</p>
+                <p>E-mail: <a href="mailto:<?php echo (\Yii::$app->getModule('conference')->mainEmail);?>"><?php echo (\Yii::$app->getModule('conference')->mainEmail);?></a></p>
+
+            </section>
             <section class="important-dates">
-                <h6 class="left-column-header"><?=\Yii::t('app/template', 'Important dates');?></h6>
+                <h5 class="left-column-header"><?=\Yii::t('app/template', 'Important dates');?></h5>
                 <ul>
                     <li class="highlight"><b>06.11.2019</b> — Регистрация, представление тезисов докладов;</li>
                     <li>26.11.2019 — Рассылка информации о принятии докладов и второго извещения;</li>
@@ -145,77 +160,38 @@ $this->beginPage();
                 </ul>
             </section>
             <section class="sponsors">
-                <h6 class="left-column-header"><?=\Yii::t('app/template', 'Sponsors');?></h6>
-                <div class="row align-items-center justify-content-center text-center ">
-                    <figure class="col-4 col-sm-3 col-md-12 col-lg-12 col-xl-6 col-xxl-3">
-                        <a href="#" class="stretched-link">
-                            <img src="/images/Wikipedia-logo-v2.svg" class="img-fluid" style="width: 60%">
-                        </a>
-                    </figure>
-                    <figure class="col-4 col-sm-3 col-md-12 col-lg-12 col-xl-6 col-xxl-3">
-                        <a href="#" class="stretched-link">
-                            <img src="/images/php-logo.svg" class="img-fluid  w-75">
-                        </a>
-                    </figure>
-                    <figure class="col-4 col-sm-3 col-md-12 col-lg-12 col-xl-6 col-xxl-3">
-                        <a href="#" class="stretched-link">
-                            <img src="/images/luyalogo.png" class="img-fluid w-50">
-                        </a>
-                    </figure>
-                    <figure class="col-4 col-sm-3 col-md-12 col-lg-12 col-xl-6 col-xxl-3">
-                        <a href="#" class="stretched-link">
-                            <img src="/images/php-logo.svg" class="img-fluid w-75">
-                        </a>
-                    </figure>
-                    <figure class="col-4 col-sm-3 col-md-12 col-lg-12 col-xl-6 col-xxl-3">
-                        <a href="#" class="stretched-link">
-                            <img src="/images/Wikipedia-logo-v2.svg" class="img-fluid" style="width: 60%">
-                        </a>
-                    </figure>
-                </div>
+                <h5 class="left-column-header"><?=\Yii::t('app/template', 'Sponsors');?></h5>
+                <?= SponsorsWidget::widget(
+                    [
+
+                    ]
+                );?>
             </section>
-            <section class="contacts">
-                <h6 class="left-column-header"><?=\Yii::t('app/template', 'Contacts');?></h6>
-
-                <!--                <p><b>+7 986 7661599</b> — телефон для связи с оргкомитетом во время симпозиума.</p>-->
-                <p><i><?=\Yii::t('app/template', 'Vladimir Vladimirovich Rumyantsev');?></i> — <?=\Yii::t('app/template', 'scientific secretary of the Symposium');?>, <br>
-                    <b><?=\Yii::t('app/template', 'Ph.');?>: (831) 417−94−82 +262</b></p>
-                <p><i><?=\Yii::t('app/template', 'Maria Vladimirovna Zorina');?></i><br>
-                    <b><?=\Yii::t('app/template', 'Ph.');?>: (831) 417-94-76 +520</b></p>
-
-                <!--                <p><i>Валентина Григорьевна Беллюстина</i> (по вопросам оплаты), <br>
-                                <b>+7 910 3810391</b></p>
-                                <p><i>Роман Станиславович Малофеев</i> (по вопросам трансфера), <br>
-                                <b>+7 904 9009555</b></p>
-                -->
-
-                <p><?=\Yii::t('app/template', 'Fax');?>: (831) 417–94–64</p>
-                <p>E-mail: <a href="mailto:symp@nanosymp.ru">symp@nanosymp.ru</a></p>
-
-            </section>
-
         </div>
-
-
     </div>
     <footer class="footer theme-bg-dark shadow">
         <div class="row no-gutters text-center text-lg-left py-3 pt-4">
         <div class="col-lg col-xl-3 px-md-5">
             <section>
-                <p>© 2010&mdash;<?=date('Y');?>, <?=\Yii::t('app/template', 'IPM RAS');?>.<br>
-                    E-mail: <a href="mailto:symp@nanosymp.ru">symp@nanosymp.ru</a></p>
+                <p>© 2010&mdash;<?=date('Y');?>, <?=\Yii::t('app/template', 'Some institute');?>.<br>
+                    E-mail: <a href="mailto:<?php echo (\Yii::$app->getModule('conference')->mainEmail);?>"><?php echo (\Yii::$app->getModule('conference')->mainEmail);?></a></p>
             </section>
         </div>
         <div class="col-lg px-xl-5">
             <section>
-                <p><?=\Yii::t('app/template', 'Phone');?>: (831) 417−94−82 +262<br>
-                    <?=\Yii::t('app/template', 'Fax');?>:    (831) 417–94–74</p>
+                <p><?=\Yii::t('app/template', 'Phone');?>: +7 (999) 999−99−99<br>
+                    <?=\Yii::t('app/template', 'Fax');?>:  +7 (999) 999−99−98</p>
             </section>
         </div>
         <div class="col-lg px-md-5">
             <section>
-                <p><?=\Yii::t('app/template', 'Address');?>: <?=\Yii::t('app/template', 'GSP-105, Nizhny Novgorod, 603950, Russia');?></p>
+                <p><?=\Yii::t('app/template', 'Address');?>: <?=\Yii::t('app/template', 'Leninskie gory, 1, Moscow, 119991, Russia');?></p>
             </section>
+        </div>
+        <div class="col-lg-2 px-md-5">
+            <figure class="text-center text-lg-right">
+                <a href="https://confetti-system.ru"><img src="/images/confetti-logo_eng_light_powered.png" class="w-75"></a>
+            </figure>
         </div>
         </div>
     </footer>

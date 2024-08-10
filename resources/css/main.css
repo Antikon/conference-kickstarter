@@ -11869,6 +11869,10 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 0.5rem;
 }
 
+.left-column section a {
+  color: #fff;
+}
+
 /* line 125, ../htdocs/conference/resources/scss/components/_base.scss */
 .left-column .highlight {
   color: #fff;
@@ -11884,11 +11888,11 @@ h1, h2, h3, h4, h5, h6 {
 /* line 143, ../htdocs/conference/resources/scss/components/_base.scss */
 .left-column-header {
   font-family: "Roboto Slab", serif;
-  font-size: .8rem;
+  font-size: .9rem;
   /*text-align: right;*/
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 1.5rem 0;
   padding: 0;
-  color: #384eb2;
+  color: #fcde6d;
   text-transform: uppercase;
   position: relative;
 }
@@ -11901,7 +11905,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   position: absolute;
   bottom: 0.16rem;
-  border-bottom-color: rgba(0, 0, 0, 0.1);
+  border-bottom-color: rgba(252, 216, 84, 0.3);
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
@@ -12012,7 +12016,7 @@ nav.navbar-dark .nav-item .nav-link:hover {
 }
 
 /* line 258, ../htdocs/conference/resources/scss/components/_base.scss */
-.social-list a {
+.scl-list a {
   width: 1.2rem;
   height: 1.2rem;
   display: inline-block;
@@ -12024,7 +12028,7 @@ nav.navbar-dark .nav-item .nav-link:hover {
 }
 
 /* line 266, ../htdocs/conference/resources/scss/components/_base.scss */
-.social-list a:hover {
+.scl-list a:hover {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
@@ -12037,7 +12041,7 @@ nav.navbar-dark .nav-item .nav-link:hover {
 }
 
 /* line 284, ../htdocs/conference/resources/scss/components/_base.scss */
-.sponsors figure {
+.sponsors img {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   -o-filter: grayscale(100%);
@@ -12048,7 +12052,7 @@ nav.navbar-dark .nav-item .nav-link:hover {
 }
 
 /* line 288, ../htdocs/conference/resources/scss/components/_base.scss */
-.sponsors figure:hover {
+.sponsors img:hover {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
   -o-filter: grayscale(0%);

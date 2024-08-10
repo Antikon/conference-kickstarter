@@ -93,28 +93,29 @@ $config = [
             'hostInstituteName' => 'IPM RAS',
             'friendlyCountries' => [
                 'Belarus',
-                'Kazakhstan',
-                'Ukraine'
+                'Kazakhstan'
             ],
 
 
-            'isAdditionalSectionEnabled' => true,
-
-            'abstractSubmissionType' => 'typing', // "upload" or "typing" (default)
-            
-            'isAbstractsAndProceedingsAreTheSame' => true,
+                        'isOnlineEnabled' => true,
+            'isSettlementEnabled' => false,
+            'isSeatingEnabled' => false,
+            'isTransportEnabled' => true,
 
             'fees' => [
             
                 'local' => [
-                    'default' => 0,
-                    'accommodation' => 20000
+                    'base' => 0,
+                    'accommodation' => 0,
+                    'oral' => 10000,
+                    'invited' => 10000,
+                    'plenary' => 10000
                 ],
 
 
                 'abroad' => [
-                    'default' => 0,
-                    'accommodation' => 300
+                    'base' => 0,
+                    'accommodation' => 0
                 ]
                 
             ],
@@ -124,24 +125,25 @@ $config = [
                 'abroad' => 'EUR'
             ],
 
-            'yandexRaspApiKey' => '2d78d5e1-3312-4685-a104-f40a4b2644ce',
+
+            'yandexRaspApiKey' => '#####insert key here#####',
 
 
-            'mainEmail' => 'symp@nanosymp.ru',  
+            'mainEmail' => 'conf@confetti-example.ru',  
             'moduleHomeUrl'=> 'my-office',
             'conferenceName' => [
                 'en' => [
                     'nominative'    => '{VII [Conference]} on Physics of Liquids'
                 ],
-/*                'ru' => [
-                    'nominative'    => '{XXIV [Cимпозиум]} «Нанофизика и наноэлектроника»',
-                    'genitive'      => '{XXIV [Cимпозиума]} «Нанофизика и наноэлектроника»',
-                    'dative'        => '{XXIV [Cимпозиуму]} «Нанофизика и наноэлектроника»',
-                    'accusative'    => '{XXIV [Cимпозиум]} «Нанофизика и наноэлектроника»',  
-                    'instrumental'  => '{XXIV [Cимпозиумом]} «Нанофизика и наноэлектроника»',
-                    'prepositional' => '{XXIV [Cимпозиуме]} «Нанофизика и наноэлектроника»'
+                'ru' => [
+                    'nominative'    => '{VII [Конференция]} по физике жидкостей',
+                    'genitive'      => '{VII [Конференции]} по физике жидкостей',
+                    'dative'        => '{VII [Конференции]} по физике жидкостей',
+                    'accusative'    => '{VII [Конференция]} по физике жидкостей',  
+                    'instrumental'  => '{VII [Конференцией]} по физике жидкостей',
+                    'prepositional' => '{VII [Конференции]} по физике жидкостей'
                 ],
-                */
+                
             ],
 
 
@@ -267,8 +269,8 @@ $config = [
             'smtpAuth' => false,
             'username' => '',
             'password' => null,
-            'from' => 'antikon2@yandex.ru',
-            'fromName' => 'Symp',
+/*            'from' => 'antikon2@yandex.ru',
+            'fromName' => 'Symp',*/
         ],
         /*
          * The composition component handles your languages and they way your urls will look like. The composition components will
@@ -345,12 +347,12 @@ $config = [
     ],
 ];
 
-/*
+
 if (YII_DEBUG) {
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = ['class' => 'yii\debug\Module', 'allowedIPs' => ['*']];
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = ['class' => 'yii\gii\Module', 'allowedIPs' => ['*']];
 }
-*/
+
 return \yii\helpers\ArrayHelper::merge($config, require('env-local-db.php'));
