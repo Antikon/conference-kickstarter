@@ -10,7 +10,6 @@
         "luyadev/luya-generic" : "^1.0",
 		"luyadev/luya-bootstrap3": "^1.0",
         "luyadev/luya-bootstrap4": "^1.0",
-        "luyadev/luya-module-crawler": "^1.0.0",
         "antikon/luya-module-conference": "dev-master",
         "cebe/luya-module-sitemap": "^1.4",
         "luyadev/luya-module-gallery" : "^1.0"
