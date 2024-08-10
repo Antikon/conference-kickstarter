@@ -38,6 +38,8 @@ $config = [
     //    'timeZone' => 'Asia/Calcutta',
 
 
+    'consoleHostInfo' => 'http://',
+
     /*
      * Let the application know which module should be executed by default (if no url is set). This module must be included
      * in the modules section. In most cases, you are using the cms as default handler for your website. But the concept
