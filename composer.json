@@ -38,9 +38,9 @@
     },
     "scripts": {
         "post-create-project-cmd": [
-            "mkdir 'public_html/assets'",
-            "mkdir 'public_html/storage'",
-            "mkdir 'runtime'",
+            "mkdir \"public_html/assets\"",
+            "mkdir \"public_html/storage\"",
+            "mkdir \"runtime\"",
             "yii\\composer\\Installer::postCreateProject"
         ]
     },
