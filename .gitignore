@@ -9,12 +9,14 @@ composer.phar
 /docker/.env
 /.env
 
+
 error.log
 
 /public_html/assets
 /public_html/storage
 
 # project config
+/configs/env-local.php
 /configs/env-local-db.php
 /configs/env.php
 
