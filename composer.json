@@ -40,6 +40,9 @@
             "mkdir \"public_html/assets\"",
             "mkdir \"public_html/storage\"",
             "mkdir \"runtime\"",
+            "cp -n \"configs/env.php.dist\" \"configs/env.php\"",
+            "cp -n \"configs/env-local.php.dist\" \"configs/env-local.php\"",
+            "cp -n \"configs/env-local-db.php.dist\" \"configs/env-local-db.php\"",
             "yii\\composer\\Installer::postCreateProject"
         ]
     },
