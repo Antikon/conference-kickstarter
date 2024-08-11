@@ -52,6 +52,18 @@ $config = [
     'basePath'     => dirname(__DIR__),
 
 
+    /*
+     * Additional params
+     *
+     */
+    'params' => [
+        /*
+         * Kartik's widgets Bootstrap version
+         */
+    	'bsVersion' => '4.x', 
+    ],
+
+
     'modules'       => [
         /*
          * If you have other admin modules (e.g., cmsadmin), then you need the admin section.
