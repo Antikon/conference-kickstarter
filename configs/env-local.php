@@ -176,14 +176,16 @@ $config = [
     'components'    => [
 
         'assetManager' => [
+            /*
             'converter' => [
                 'class'    => 'yii\web\AssetConverter',
                 'commands' => [
                     'scss' => ['css', 'sass {from} {to} --source-map'],
                 ],
             ],
+            */
 
-            // override bundles to use local project files :
+            // override bootstrap bundles to use local project files :
             'bundles'   => [
                 'yii\bootstrap4\BootstrapAsset' => [
                     'sourcePath' => '@app/resources',
@@ -191,31 +193,15 @@ $config = [
                         'css/main.css'
                     ],
                 ],
-                /*	
-                'yii\bootstrap\BootstrapPluginAsset' => [
-                    'sourcePath' => '@app/resources',
-                    'css' => [
-                        'css/main.css'
-                    ],
-                    'js' => [
-                        'js/bootstrap.min.js'
-                    ],
 
-                ],
-                
-                'yii\bootstrap\BootstrapThemeAsset' => [
+                /*
+                'yii\bootstrap4\BootstrapPluginAsset' => [
                     'sourcePath' => '@app/resources',
-                    'css' => [
-                        'css/main.css'
-                    ],
-                    'js' => [
-                        'js/bootstrap.min.js'
-                    ],
+                    'js' => [],
+
                 ],
                 */
             ],
-
-
         ],
 
 

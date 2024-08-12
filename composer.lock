@@ -77,12 +77,21 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Antikon/luya-module-conference.git",
+<<<<<<< Updated upstream
                 "reference": "39e96c1cf2d66e4ed2e2c2170a03a09c7996f9e4"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/Antikon/luya-module-conference/zipball/39e96c1cf2d66e4ed2e2c2170a03a09c7996f9e4",
                 "reference": "39e96c1cf2d66e4ed2e2c2170a03a09c7996f9e4",
+=======
+                "reference": "2ea796e57721fba99137b559faa8dec955128179"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Antikon/luya-module-conference/zipball/2ea796e57721fba99137b559faa8dec955128179",
+                "reference": "2ea796e57721fba99137b559faa8dec955128179",
+>>>>>>> Stashed changes
                 "shasum": ""
             },
             "require": {
@@ -109,7 +118,7 @@
                 "npm-asset/wiris--mathtype-tinymce6": "^8.1.1",
                 "phpoffice/phpword": "^1.0",
                 "tinymce/tinymce": "^6.1",
-                "yiisoft/yii2-bootstrap4": "~2.0.8"
+                "yiisoft/yii2-bootstrap4": "^2.0"
             },
             "require-dev": {
                 "codeception/codeception": "^5.1",
@@ -169,7 +178,11 @@
                 "source": "https://github.com/Antikon/luya-module-conference/tree/master",
                 "issues": "https://github.com/Antikon/luya-module-conference/issues"
             },
+<<<<<<< Updated upstream
             "time": "2024-08-11T15:23:14+00:00"
+=======
+            "time": "2024-08-11T16:06:02+00:00"
+>>>>>>> Stashed changes
         },
         {
             "name": "bizley/jwt",
