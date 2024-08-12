@@ -14,6 +14,7 @@ error.log
 
 /public_html/assets
 /public_html/storage
+/public_html/confUploads
 
 # project config
 /configs/env-local.php

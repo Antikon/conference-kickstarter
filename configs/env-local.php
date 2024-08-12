@@ -286,6 +286,11 @@ $config = [
                 ],
             ],
         ],
+        // Extension of the Luya Web View Class
+        'view' => [
+            'class' => 'antikon\conference\web\View',
+        ],
+
     ],
     'controllerMap' => [
         'migration' => [
