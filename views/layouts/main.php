@@ -129,8 +129,8 @@ $this->beginPage();
         </div>
 
 
-        <div class="b theme-bg-light shadow">
-            <section class="cta-section p-5">
+        <div class="b theme-bg-light shadow ">
+            <section class="main-text p-5">
                     <h1  class="heading"><?= $this->title; ?></h1>
                     <?= $content; ?>
             </section>
