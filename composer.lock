@@ -77,21 +77,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Antikon/luya-module-conference.git",
-<<<<<<< Updated upstream
-                "reference": "39e96c1cf2d66e4ed2e2c2170a03a09c7996f9e4"
+                "reference": "cf7776b40a4814ce82b731c4650cb070e727d09a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Antikon/luya-module-conference/zipball/39e96c1cf2d66e4ed2e2c2170a03a09c7996f9e4",
-                "reference": "39e96c1cf2d66e4ed2e2c2170a03a09c7996f9e4",
-=======
-                "reference": "2ea796e57721fba99137b559faa8dec955128179"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Antikon/luya-module-conference/zipball/2ea796e57721fba99137b559faa8dec955128179",
-                "reference": "2ea796e57721fba99137b559faa8dec955128179",
->>>>>>> Stashed changes
+                "url": "https://api.github.com/repos/Antikon/luya-module-conference/zipball/cf7776b40a4814ce82b731c4650cb070e727d09a",
+                "reference": "cf7776b40a4814ce82b731c4650cb070e727d09a",
                 "shasum": ""
             },
             "require": {
@@ -178,11 +169,7 @@
                 "source": "https://github.com/Antikon/luya-module-conference/tree/master",
                 "issues": "https://github.com/Antikon/luya-module-conference/issues"
             },
-<<<<<<< Updated upstream
-            "time": "2024-08-11T15:23:14+00:00"
-=======
-            "time": "2024-08-11T16:06:02+00:00"
->>>>>>> Stashed changes
+            "time": "2024-08-21T14:15:45+00:00"
         },
         {
             "name": "bizley/jwt",
@@ -269,16 +256,16 @@
         },
         {
             "name": "bower-asset/inputmask",
-            "version": "5.0.9",
+            "version": "5.0.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
-                "reference": "310a33557e2944daf86d5946a5e8c82b9118f8f7"
+                "url": "git@github.com:RobinHerbots/Inputmask.git",
+                "reference": "e0f39e0c93569c6b494c3a57edef2c59313a6b64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/310a33557e2944daf86d5946a5e8c82b9118f8f7",
-                "reference": "310a33557e2944daf86d5946a5e8c82b9118f8f7"
+                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/e0f39e0c93569c6b494c3a57edef2c59313a6b64",
+                "reference": "e0f39e0c93569c6b494c3a57edef2c59313a6b64"
             },
             "require": {
                 "bower-asset/jquery": ">=1.7"
@@ -879,16 +866,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.13.42",
+            "version": "8.13.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "b7ee848bbd1958ff7464522d5c6e3688cca2a125"
+                "reference": "62250ef492ea8afedf534381844194f43ff1f7f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/b7ee848bbd1958ff7464522d5c6e3688cca2a125",
-                "reference": "b7ee848bbd1958ff7464522d5c6e3688cca2a125",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/62250ef492ea8afedf534381844194f43ff1f7f2",
+                "reference": "62250ef492ea8afedf534381844194f43ff1f7f2",
                 "shasum": ""
             },
             "require": {
@@ -950,7 +937,7 @@
                 "issues": "https://github.com/giggsey/libphonenumber-for-php/issues",
                 "source": "https://github.com/giggsey/libphonenumber-for-php"
             },
-            "time": "2024-07-29T07:19:22+00:00"
+            "time": "2024-08-13T12:17:37+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -3445,16 +3432,16 @@
         },
         {
             "name": "psr/log",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001"
+                "reference": "79dff0b268932c640297f5208d6298f71855c03e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe5ea303b0887d5caefd3d431c3e61ad47037001",
-                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/79dff0b268932c640297f5208d6298f71855c03e",
+                "reference": "79dff0b268932c640297f5208d6298f71855c03e",
                 "shasum": ""
             },
             "require": {
@@ -3489,9 +3476,9 @@
                 "psr-3"
             ],
             "support": {
-                "source": "https://github.com/php-fig/log/tree/3.0.0"
+                "source": "https://github.com/php-fig/log/tree/3.0.1"
             },
-            "time": "2021-07-14T16:46:02+00:00"
+            "time": "2024-08-21T13:31:24+00:00"
         },
         {
             "name": "robthree/twofactorauth",
