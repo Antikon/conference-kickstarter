@@ -8,6 +8,7 @@
         "luyadev/luya-module-admin" : "^5.0",
         "luyadev/luya-module-cms" : "^5.0",
         "luyadev/luya-generic" : "^1.0",
+		"luyadev/luya-bootstrap3": "^1.0",
         "luyadev/luya-bootstrap4": "^1.1",
         "antikon/luya-module-conference": "dev-master"
     },
