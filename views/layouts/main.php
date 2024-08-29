@@ -1,6 +1,9 @@
 <?php
 
+use antikon\conference\frontend\widgets\DatePeriodWidget;
+use antikon\conference\frontend\widgets\ImportantDatesWidget;
 use antikon\conference\frontend\widgets\SponsorsWidget;
+use antikon\conference\models\ConfEvents;
 use app\assets\ResourcesAsset;
 use luya\cms\widgets\LangSwitcher;
 use yii\helpers\Html;
@@ -86,8 +89,16 @@ $this->beginPage();
                     </p>
                 </div>
                 <div class="col-xl-2  my-auto">
-                    <p class="h2"><?=\Yii::t('app/template', 'Moscow');?><br>
-                        <?=\Yii::t('app/template', 'June, 10–13, 2028');?>
+                    <p class="h2"><?=\Yii::t('app/template', 'Moscow');?>,<br>
+                        <?= DatePeriodWidget::widget([
+                            'period' => ConfEvents::getConferencePeriod(),
+                            'lang'   => Yii::$app->composition->langShortCode,
+                            'isSimple' => true,
+                        ]); ?>
+
+                        <?//=\Yii::t('app/template', 'June, 10–13, 2028');?>
+
+
                     </p>
                 </div>
             </div>
@@ -150,14 +161,10 @@ $this->beginPage();
             </section>
             <section class="important-dates">
                 <h5 class="left-column-header"><?=\Yii::t('app/template', 'Important dates');?></h5>
-                <ul>
-                    <li class="highlight"><b>06.11.2019</b> — Регистрация, представление тезисов докладов;</li>
-                    <li>26.11.2019 — Рассылка информации о принятии докладов и второго извещения;</li>
-                    <li>23.01.2020 — Крайний срок оплаты оргвзноса за участие в Симпозиуме; </li>
-                    <li>23.01.2020 — Крайний срок представления расширенных тезисов для публикации в трудах Cимпозиума; </li>
-                    <li>05.03.2020 — Крайний срок представления статей для публикаций в журналах; </li>
-
-                </ul>
+                <?= ImportantDatesWidget::widget([
+                        'lang'   => Yii::$app->composition->langShortCode,
+                    ]
+                ); ?>
             </section>
             <section class="sponsors">
                 <h5 class="left-column-header"><?=\Yii::t('app/template', 'Sponsors');?></h5>

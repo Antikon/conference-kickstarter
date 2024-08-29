@@ -77,12 +77,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Antikon/luya-module-conference.git",
-                "reference": "2043d4ffc00b2ad318fd848914c57e51b92183ac"
+                "reference": "f64cce30d94de3470d08cac7fea7023ad5ad102a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Antikon/luya-module-conference/zipball/2043d4ffc00b2ad318fd848914c57e51b92183ac",
-                "reference": "2043d4ffc00b2ad318fd848914c57e51b92183ac",
+                "url": "https://api.github.com/repos/Antikon/luya-module-conference/zipball/f64cce30d94de3470d08cac7fea7023ad5ad102a",
+                "reference": "f64cce30d94de3470d08cac7fea7023ad5ad102a",
                 "shasum": ""
             },
             "require": {
@@ -169,7 +169,7 @@
                 "source": "https://github.com/Antikon/luya-module-conference/tree/master",
                 "issues": "https://github.com/Antikon/luya-module-conference/issues"
             },
-            "time": "2024-08-22T10:16:29+00:00"
+            "time": "2024-08-22T11:35:02+00:00"
         },
         {
             "name": "bizley/jwt",

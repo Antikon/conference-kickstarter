@@ -18,5 +18,6 @@ class ResourcesAsset extends Asset
 
     public $depends = [
         'yii\web\JqueryAsset',
+        'yii\bootstrap4\BootstrapPluginAsset'
     ];
 }

@@ -194,13 +194,15 @@ $config = [
                     ],
                 ],
 
-                /*
                 'yii\bootstrap4\BootstrapPluginAsset' => [
                     'sourcePath' => '@app/resources',
-                    'js' => [],
-
+                    'css'        => [
+                        'css/main.css'
+                    ],
+                    'js' => [
+                        'js/bootstrap.bundle.min.js'
+                    ]
                 ],
-                */
             ],
         ],
 
