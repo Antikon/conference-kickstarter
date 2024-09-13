@@ -1,0 +1,1 @@
+{"result":{"text":"square root of 87878787"},"status":"ok"}

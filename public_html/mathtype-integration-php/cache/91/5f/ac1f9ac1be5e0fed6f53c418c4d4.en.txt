@@ -1,0 +1,1 @@
+{"result":{"text":"integral subscript blank superscript blank cross times l k l k l"},"status":"ok"}
