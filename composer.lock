@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7da798b0dbed074a4af58b85209ea2f",
+    "content-hash": "be007bd22bbde396f7cdf3fe0ea766d0",
     "packages": [
         {
             "name": "2amigos/yii2-tinymce-widget",
@@ -77,12 +77,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Antikon/luya-module-conference.git",
-                "reference": "def21ce82799b1ff69beb57daeaf5f3ff67cc126"
+                "reference": "db73afc1ca0484e1d0dbd52723085ce9037270bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Antikon/luya-module-conference/zipball/def21ce82799b1ff69beb57daeaf5f3ff67cc126",
-                "reference": "def21ce82799b1ff69beb57daeaf5f3ff67cc126",
+                "url": "https://api.github.com/repos/Antikon/luya-module-conference/zipball/db73afc1ca0484e1d0dbd52723085ce9037270bd",
+                "reference": "db73afc1ca0484e1d0dbd52723085ce9037270bd",
                 "shasum": ""
             },
             "require": {
@@ -169,7 +169,7 @@
                 "source": "https://github.com/Antikon/luya-module-conference/tree/master",
                 "issues": "https://github.com/Antikon/luya-module-conference/issues"
             },
-            "time": "2024-09-13T12:35:40+00:00"
+            "time": "2024-09-14T12:55:29+00:00"
         },
         {
             "name": "bizley/jwt",
