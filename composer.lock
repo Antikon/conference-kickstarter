@@ -77,12 +77,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Antikon/luya-module-conference.git",
-                "reference": "8fc555cd52d3a6557184f7d30913c2ff3d134955"
+                "reference": "6fa5606f1d4e3a014df7919b3e90712fb81bbd59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Antikon/luya-module-conference/zipball/8fc555cd52d3a6557184f7d30913c2ff3d134955",
-                "reference": "8fc555cd52d3a6557184f7d30913c2ff3d134955",
+                "url": "https://api.github.com/repos/Antikon/luya-module-conference/zipball/6fa5606f1d4e3a014df7919b3e90712fb81bbd59",
+                "reference": "6fa5606f1d4e3a014df7919b3e90712fb81bbd59",
                 "shasum": ""
             },
             "require": {
@@ -170,7 +170,7 @@
                 "source": "https://github.com/Antikon/luya-module-conference/tree/master",
                 "issues": "https://github.com/Antikon/luya-module-conference/issues"
             },
-            "time": "2024-09-15T09:08:14+00:00"
+            "time": "2024-09-18T07:48:44+00:00"
         },
         {
             "name": "bizley/jwt",
@@ -260,16 +260,16 @@
         },
         {
             "name": "bower-asset/jquery",
-            "version": "3.6.4",
+            "version": "3.7.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:jquery/jquery-dist.git",
-                "reference": "91ef2d8836342875f2519b5815197ea0f23613cf"
+                "url": "https://github.com/jquery/jquery-dist.git",
+                "reference": "fde1f76e2799dd877c176abde0ec836553246991"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/91ef2d8836342875f2519b5815197ea0f23613cf",
-                "reference": "91ef2d8836342875f2519b5815197ea0f23613cf"
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/fde1f76e2799dd877c176abde0ec836553246991",
+                "reference": "fde1f76e2799dd877c176abde0ec836553246991"
             },
             "type": "bower-asset",
             "license": [
