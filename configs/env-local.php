@@ -176,6 +176,7 @@ $config = [
     'components'    => [
 
         'assetManager' => [
+            'appendTimestamp' => true,
             /*
             'converter' => [
                 'class'    => 'yii\web\AssetConverter',

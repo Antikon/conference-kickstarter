@@ -96,7 +96,6 @@ h1, h2, h3, h4, h5, h6 {
 	.d-md-grid {
 		display: grid !important;
 	}
-
 }
 
 .grid {
@@ -310,6 +309,8 @@ nav.navbar-dark {
 
 
 
+
+
 /* Footer */
 .footer {
 	color: rgba(256, 256, 256, 0.7);
@@ -317,4 +318,15 @@ nav.navbar-dark {
 		color: #fff;
 
 	}
+}
+
+@media (min-width: map-get($grid-breakpoints, "xl")) {
+	.tt-name {
+		width: 30%;
+	}
+
+	.tt-info {
+		width: 70%;
+	}
+
 }
